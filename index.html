@@ -1,16 +1,36 @@
 <html>
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
 <body>
-<svg width="1200" height="800" viewBox="0 0 220 220"
-     xmlns="http://www.w3.org/2000/svg">
-  <filter id="displacementFilter">
-    <feTurbulence type="turbulence" baseFrequency="0.1"
-        numOctaves="3" result="turbulence"/>
-    <feDisplacementMap in2="turbulence" in="SourceGraphic"
-        scale="50" xChannelSelector="R" yChannelSelector="G"/>
-  </filter>
+<div style="text-align:center; width:650; font-family: DactylBold; font-size: 60pt; padding: 20px">
+    <svg width="80" height="80" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <filter id="splot">
+            <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence"/>
+            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
 
-  <circle cx="100" cy="100" r="100"
-      style="filter: url(#displacementFilter)"/>
-</svg>
+        <circle cx="100" cy="100" r="80" style="filter: url(#splot)"/>
+    </svg>
+    terryspitz.github.io
+</div>
+<div class="flow">
+<a class="fade" href="https://github.com/terryspitz/dactyl-font"><img src="img/dactyl.png"><img src="img/dactylE.png">Dactyl Font</a>
+<a class="fade" href="https://terryspitz.github.io/Pool/public/index.html"><img src="img/pool.png"><img src="img/poolE.png">Pool caustics</a>
+<a class="fade" href="https://github.com/terryspitz/ipython_notebooks/blob/master/fontvolve/fontvolve.ipynb"><img src="img/fontvolve.png"><img src="img/fontvolveE.png">Fontvolve</a>
+<a class="fade" href="https://github.com/terryspitz/panbrowser"><img src="img/pan.png"><img src="img/panE.png">Pan browser</a>
+<a class="fade"><img src="img/.png">Conrad the Camel</a>
+<a class="fade"><img src="img/.png">ESP VGA Games</a>
+<a class="fade"><img src="img/.png">Peace Clock</a>
+<a class="fade"><img src="img/.png">Cookie cutters</a>
+</div>
 </body>
+<script>
+    function over(e) {
+        e.style.backgroundImage = e.style.backgroundImage.replace("E.png", ".png"); 
+    }
+    function out(e) {
+        e.style.backgroundImage = e.style.backgroundImage.replace(".png", "E.png"); 
+    }
+</script>
 </html>

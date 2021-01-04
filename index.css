@@ -1,0 +1,55 @@
+@font-face {
+    font-family: DactylBold;
+    src: url(Dactyl\ Sans\ Bold.ttf);
+}
+@font-face {
+    font-family: DactylExtraLight;
+    src: url(Dactyl\ Sans\ Extra\ Light.ttf);
+}
+body {
+    background-color: lightgrey;
+    background-image:url(paper.svg);
+    padding: 35px;
+}
+.flow {
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 20px;
+    width: 200px;
+    height: 200px; */
+}
+.fade {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+    width: 180px;
+    height: 180px;
+    font-family: DactylBold;
+    font-size: 20pt;
+    text-decoration: none;
+    text-decoration-color: black;
+}
+.fade:link {
+    color: black;
+}
+.fade:visited {
+    color: darkgreen;
+}
+.fade img {
+    position: absolute;
+    opacity: 0.9;
+    width: 220px;
+    height: 220px;
+    margin: -20px;
+    transition: all .8s;
+    z-index: -1;
+}
+/* fade between images on hover, from https://stackoverflow.com/a/44908602/1991573 */
+.fade img:first-child { 
+    opacity: 1;
+    z-index: -1;
+}
+.fade:hover img:nth-child(2) { 
+    opacity: 0;
+}
