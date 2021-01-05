@@ -8,7 +8,7 @@
 }
 body {
     background-color: lightgrey;
-    background-image:url(paper.svg);
+    /* background-image:url(paper.svg); */
     padding: 35px;
 }
 .flow {
