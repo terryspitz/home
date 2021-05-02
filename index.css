@@ -61,3 +61,8 @@ body {
     padding: 25px;
     z-index: 2;
 }
+@keyframes pulse {
+    0% {r: 70;}
+    50% {r: 65;}
+    100% {r: 70;}
+}
